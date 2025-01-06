@@ -1,3 +1,10 @@
+#project specific ignore list
+data/raw/archive.zip
+data/raw/reviews.csv
+
+#macos specific
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
