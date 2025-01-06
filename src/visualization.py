@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from tempfile import NamedTemporaryFile
 
+
 class PDFReport(FPDF):
     """
     A class for creating a professional PDF report for hotel review analysis.
