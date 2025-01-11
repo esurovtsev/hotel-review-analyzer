@@ -74,3 +74,5 @@ def generate_report():
 
 if __name__ == "__main__":
     app.run(debug=True, port=5001)
+
+# curl -X POST -F "file=@data/processed/sample2.csv" http://127.0.0.1:5000/generate-report --output outputs/report.pdf
