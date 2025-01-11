@@ -215,10 +215,8 @@ def process_and_save_generalized_topics(input_file, output_file):
     """
     grouped_reviews = group_reviews_by_sentiment(input_file)
 
-    key_topics_by_sentiment = {"positive": [], "negative": []}
+    key_topics_by_sentiment = {"positive": [], "negative": [], "neutral": []}
     for sentiment, reviews in grouped_reviews.items():
-        if sentiment == "neutral":
-            continue
         for review in reviews:
             key_topics_by_sentiment[sentiment].extend(review["key_topics"])
 

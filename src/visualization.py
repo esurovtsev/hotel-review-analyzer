@@ -2,9 +2,12 @@ import json
 import os
 from fpdf import FPDF
 import matplotlib.pyplot as plt
+
 from PIL import Image
 from tempfile import NamedTemporaryFile
 
+import matplotlib
+matplotlib.use("Agg")  # Use a non-GUI backend for Matplotlib
 
 class PDFReport(FPDF):
     """
