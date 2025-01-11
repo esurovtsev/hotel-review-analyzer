@@ -30,7 +30,7 @@ A project demonstrating text analysis and report generation using machine learni
   - **Text Analysis**: `OpenAI API`
   - **Visualization**: `matplotlib`, `plotly`
   - **Report Generation**: `fpdf`
-  - **Web Interface**: `Flask`, `Streamlit`
+  - **Web Interface**: `Flask`
 - **Tools**:
   - Jupyter Notebook for exploratory analysis
   - Visual Studio Code for development
@@ -50,12 +50,15 @@ Hotel_Review_Analyzer/
 │   ├── text_analysis.py  # AI-based text analysis scripts
 │   ├── report_generator.py  # Report generation scripts
 │   ├── visualization.py  # Visualization scripts
-│   └── app.py            # Flask/Streamlit application
-├── tests/                # Unit tests
-├── outputs/              # Generated reports and visualizations
-├── requirements.txt      # List of Python dependencies
-├── README.md             # Project documentation
-└── .gitignore            # Files and folders excluded from version control
+│   ├── app.py           # Flask web application
+│   ├── static/          # Static files for web interface
+│   └── templates/       # HTML templates
+├── tests/               # Unit tests
+├── outputs/             # Generated reports and visualizations
+├── uploads/             # Temporary storage for uploaded files
+├── requirements.txt     # List of Python dependencies
+├── README.md           # Project documentation
+└── .gitignore         # Files and folders excluded from version control
 ```
 
 ---
@@ -79,22 +82,24 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### **4. Prepare the Dataset**
+### **4. Environment Configuration**
+Create a `.env` file in the project root with the following content:
+```
+OPENAI_API_KEY=your_api_key_here
+```
+
+### **5. Prepare the Dataset**
 - Download the hotel reviews dataset from Kaggle and place it in the `data/raw/` folder.
 - Run the `data_loader.py` script to preprocess the data:
   ```bash
   python src/data_loader.py
   ```
 
-### **5. Run the Application**
-- For the command-line version:
-  ```bash
-  python src/app.py
-  ```
-- For the web interface:
-  ```bash
-  streamlit run src/app.py
-  ```
+### **6. Run the Application**
+```bash
+python src/app.py
+```
+The web interface will be available at `http://localhost:5001`
 
 ---
 
